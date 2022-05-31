@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/stylesheet.css') }}">
+    <title>MY AMAZING SITE</title>
+</head>
+<body>
+    <h1>WELCOME TO MY AMAZING SITE!</h1>  
+    <form action="/register" method="POST">
+        <h2>REGISTER</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div>
+            <label>FIRST NAME:</label>
+            <input type="text" name="first_name">
+        </div>
+        <div>
+            <label>LAST NAME:</label>
+            <input type="text" name="last_name">
+        </div>
+        <div>
+            <label>EMAIL:</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label>PASSWORD:</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label>CONFIRM PASSWORD:</label>
+            <input type="password" name="confirm_password">
+        </div>
+        <button>REGISTER</button>
+    </form>
+    <h2>LOGIN</h2>
+    <form action="/login" method="POST">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}  
+    <div>
+        <label>EMAIL:</label>
+        <input type="email" name="email">
+    </div>
+    <div>
+        <label>PASSWORD:</label>
+        <input type="password" name="password">
+    </div>
+    <button>LOG IN</button>
+    </form>
+</body>
+</html>
