@@ -1,4 +1,4 @@
-#1:1 Change the jue 10 in x to 15. Once you're done, x should now be [ [5,2,3], [15,8,9] ].
+#1:1 Change the value 10 in x to 15. Once you're done, x should now be [ [5,2,3], [15,8,9] ].
 x = [5,2,3], [10,9,8]
 x[1][0]=15
 print(x)
@@ -17,7 +17,7 @@ sports_directory = {
 sports_directory['soccer'][0] = 'Andres'
 for i in range(len(sports_directory['soccer'])):
     print(sports_directory['soccer'][i])
-#1:4 Change the jue 20 in z to 30
+#1:4 Change the value 20 in z to 30
 z = [{'x': 10, 'y': 20}]
 z[0]['y'] = 30
 print(z)
